@@ -293,13 +293,13 @@ body {
     }
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 800px) {
     .aside-1 > .ads-con:not(:first-of-type) {
         display: none;
     }
 
     .ads-con > img {
-        width: 100% !important;
+        width: 100%;
     }
 
     .aside-2 {
