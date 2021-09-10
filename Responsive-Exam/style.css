@@ -1,0 +1,299 @@
+    /* Layout */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+.wrapper > * {
+    /* padding: 10px; */
+    flex: 1 100%;
+}
+
+.header {
+    font-size: 0;   
+}
+
+.aside-1:first-of-type {
+    order: 0;
+}
+
+.main {
+    order: 1;
+}
+
+.fixed-ad {
+    order: 2;
+}
+
+.header > img {
+    width: 100%;
+}
+
+footer {
+    background: lightgreen;
+    order: 2;
+}
+
+.main {
+    text-align: left;
+}
+
+@media all and (max-width: 892px) {
+    .aside-2 {
+        display: none;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+        /* every other <> is on its on line with flex-basis: 100%; except the .aside(s) */
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3;
+        /* 3 times the size of adjacent <>? 
+        also overrides flex-basis: 100%; */
+    }
+
+    .aside-1 {
+        order: 1;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .aside-2 {
+        order: 3;
+    }
+
+    .fixed-ad {
+        order: 4;
+    }
+
+    footer {
+        order: 5;
+    }
+}
+
+    /* Navigation */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.responsive-navbar {
+    /* width: 100%; */
+    /* height: 50px; */
+    background-color: #117da9;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.responsive-navbar > #resnavbar-type {
+    display: none;
+}
+
+.responsive-navbar .res-menu {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.responsive-navbar .res-menu > img {
+    width: 40px;
+}
+
+.responsive-navbar > .res-menu > .nav-value {
+    display: inline-block;
+    font-size: 22px;
+    color: gold;
+    padding: 15px;
+}
+
+.responsive-navbar > .res-navbtn {
+    display: none;
+}
+
+.responsive-navbar > .resnavbar-links {
+    display: inline; 
+    float: right;
+    font-size: 18px;
+}
+
+.responsive-navbar > .resnavbar-links > a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+.responsive-navbar > .resnavbar-links > a:hover {
+    background-color: gold;
+    color: black;
+}
+
+@media all and (max-width: 650px) {
+    .responsive-navbar > .res-navbtn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    
+    .responsive-navbar > .res-navbtn > label {
+        display: inline-block;
+        width: 50px;
+        height: 100%; 
+        padding: 16px;
+    }
+    
+    .responsive-navbar > .res-navbtn > label:hover, #resnavbar-type:checked ~ .res-navbtn > label {
+        background-color: gold;
+    }
+    
+    .responsive-navbar > .res-navbtn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid white; 
+    }
+
+    .responsive-navbar > .resnavbar-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #1ba1d6;
+        height: 0px;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .responsive-navbar > .resnavbar-links > a {
+        display: block;
+        width: 100%;
+    }   
+
+    .responsive-navbar > #resnavbar-type:not(:checked) ~ .resnavbar-links {
+        height: 0px;
+    }
+    
+    .responsive-navbar > #resnavbar-type:checked ~ .resnavbar-links {
+        height: 100vh;
+        overflow-y: auto;
+        outline: 2px solid gold;    
+    }
+
+    
+}
+
+.ads-con {
+    border: 5px solid skyblue;
+    border-radius: 5px;
+    margin: 5px 0;
+    line-height: 0;
+}
+
+.ads-con > img {
+    width: 350px;
+    vertical-align: middle;
+    display: table;
+}
+
+.fixed-ad {
+    position: sticky;
+    bottom: 0;
+}
+
+.fixed-ad > img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.fixed-ad > i {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+@media all and (min-width: 800px) {
+    .fixed-ad > img {
+        width: 60%;
+    }
+    .fixed-ad > i {
+        left: 59%;
+    }
+}
+
+
+.news-block {
+    padding: 20px 0;
+    border-bottom: 2px solid #c0c0c0;
+    margin: 0 30px;
+}
+
+.news-block > h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.news-block a {
+    color: red;
+}
+
+.news-block:first-of-type {
+    border-top: 2px solid #c0c0c0;
+    margin-top: 30px;
+}
+
+.news-block:last-of-type {
+    margin-bottom: 30px;
+}
+
+.news-block > img {
+    width: 30%;
+    border-radius: 8px;
+    float: left;
+    margin: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-flow: row nowrap;   
+}
+
+.footer > * {
+    text-align: center;
+    flex: 1;
+    margin: 20px;
+}
+
+.footer img {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 15px;
+}
+
+@media all and (max-width: 650px) {
+    .footer {
+        flex-flow: column wrap;
+    }
+}
