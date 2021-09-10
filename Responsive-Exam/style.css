@@ -45,11 +45,6 @@ footer {
     text-align: left;
 }
 
-@media all and (max-width: 892px) {
-    .aside-2 {
-        display: none;
-    }
-}
 
 @media all and (min-width: 600px) {
     .aside {
@@ -295,5 +290,27 @@ body {
 @media all and (max-width: 650px) {
     .footer {
         flex-flow: column wrap;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .aside-1 > .ads-con:not(:first-of-type) {
+        display: none;
+    }
+
+    .ads-con > img {
+        width: 100%;
+    }
+
+    .aside-2 {
+        display: block !important;
+        order: 2;
+    }
+}
+
+
+@media all and (max-width: 1000px) {
+    aside.aside.aside-2 {
+        display: none;
     }
 }
