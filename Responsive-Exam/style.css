@@ -293,7 +293,7 @@ body {
     }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
     .aside-1 > .ads-con:not(:first-of-type) {
         display: none;
     }
