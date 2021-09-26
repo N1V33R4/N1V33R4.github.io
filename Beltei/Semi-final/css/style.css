@@ -1,4 +1,4 @@
-    /* Layout */
+/* Layout */
 * {
     margin: 0;
     padding: 0;
@@ -123,6 +123,7 @@ body {
     padding: 20px;
     text-align: center;
     color: #002240;
+    transition: 0.2s ease-in-out;
 }
 
 .mobile-nav .icon:hover {
