@@ -1,0 +1,160 @@
+    /* Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    text-align: center;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+}
+
+.main {
+    order: 1;
+}
+
+.aside {
+    order: 2;
+}
+
+.main {
+    text-align: left;
+}
+
+.navbar-brand img {
+    height: 3rem;
+}
+
+.nav-link.active {
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #888;
+}
+
+@media all and (min-width: 900px) {
+    .main {
+        flex: 3;
+    }
+
+    .aside-1 {
+        order: 1;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .aside-2 {
+        display: none;
+        order: 3;
+    }
+} 
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.ads-con {
+    margin: 10px 0;
+}
+
+.ads-con > img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.news-block {
+    padding: 20px 0;
+    border-bottom: 2px solid #c0c0c0;
+    margin: 0 30px;
+}
+
+.news-block > h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.news-block a {
+    color: red;
+}
+
+.news-block:first-of-type {
+    border-top: 2px solid #c0c0c0;
+    margin-top: 30px;
+}
+
+.news-block:last-of-type {
+    margin-bottom: 30px;
+}
+
+.news-block > img {
+    width: 250px;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav .icon {
+    position: relative;
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    color: #002240;
+}
+
+.mobile-nav .icon:hover {
+    background-color: #047aed;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .ads-con > img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .slideshow {
+        display: none;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+        /* every other <> is on its on line with flex-basis: 100%; except the .aside(s) */
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .aside-2 {
+        display: block;
+    }
+}

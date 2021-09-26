@@ -1,0 +1,15 @@
+﻿1- Banner: 5
+2- Menu with Search: 5
+3- Slide Show (4 Item): 5
+4- Left Ads and Right: 5
+5- List News (4 News): 5
+6- Read More: 5
+7- Footer: 5
+8- Responsive Website: 10
+9- Menu Responsive: 10
+10- Hide Slide Show When Use Mobile Device: 10
+11- Left Ads Set Go to Down When Use Mobile Device: 10
+12- Menu Bottom When Use Mobile Device: 10
+13- Layout and Interface Website: 10
+14- Upload Project to Hosting Server: 5
+
