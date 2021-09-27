@@ -190,23 +190,30 @@ code, pre {
 }
 
 /* Cli */
+.cli .card {
+    background-color: #f8961e;
+    color: #fff;
+}
+
 .cli .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .cli .grid > *:first-child {
     grid-column: 1 / span 2; /* grid-item size and location*/
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
 }
 
 /* Cloud */
 .cloud {
-    background-color: #577590; 
+    background-color: #577590;
     color: #fff;
 }
+
 .cloud .grid {
     grid-template-columns: 3fr 4fr;
+    gap: 30px;
 }
 
 
@@ -219,6 +226,8 @@ code, pre {
     text-align: center;
     margin: 18px 10px 40px;
     transition: transform 0.2s ease-in;
+    color: #fff;
+    background-color: #c62133;
 }
 
 .languages .card h4 {
@@ -375,13 +384,17 @@ code, pre {
 @media(max-width: 768px) {
     .grid,
     .showcase .grid,
-    .stats .grid,
     .cli .grid,
     .cloud .grid,
     .features-main .grid,
     .docs-main .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+    
+    .stats .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     .showcase {
@@ -396,12 +409,16 @@ code, pre {
     .showcase-form {
         justify-self: center;
         margin: auto;
-        margin-bottom: 40px;;
+        margin-bottom: 40px;
     }
 
     .cli .grid > *:first-child {
-        grid-column: 1;
+        grid-column: 1 / span 2;
         grid-row: 1;
+    }
+
+    .cli .grid > *:last-child {
+        grid-column: span 2;
     }
 
     .cloud {
@@ -414,9 +431,9 @@ code, pre {
         text-align: center;
     }
     
-    .features-head img, 
+    .features-head i, 
     .features-sub-head img,
-    .docs-head img {
+    .docs-head i {
         justify-self: center;
     }
 
@@ -445,5 +462,14 @@ code, pre {
         animation: slideInFromBottom 1s ease-in;
         width: 100vw;
         height: auto;
+    }
+    
+    .stats .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .cli .grid > * {
+        grid-column: span 1 !important;
     }
 }
