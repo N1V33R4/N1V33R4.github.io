@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Loruki | Cloud Hosting For Everyone</title>
+    <title>Menu | Pongsifu</title>
 </head>
 
 <body>
+    <a name="top"></a>
+    <a href="#top" class="scrollToTopBtn"><i class="fas fa-level-up-alt fa-3x"></i></a>
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
@@ -27,52 +29,123 @@
     </div>
 
     <!-- Head -->
-    <section class="features-head bg-primary py-3">
+    <section class="features-head">
+        <video autoplay muted loop poster="videos/sushi_placeholder.jpg">
+            <source src="videos/sushi.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
         <div class="container grid">
             <div>
-                <h1 class="xl">Features</h1>
-                <p class="lead">Check out the features of Loruki that separate us from the competition</p>
+                <h1 class="xl">Our Menu</h1>
+                <p class="lead">Check out the menu of Pongsifu that separates us from the competition</p>
             </div>
             <i class="fad fa-book-open fa-7x"></i>
         </div>
     </section>
 
     <!-- Sub head -->
-    <section class="features-sub-head bg-light py-3">
+    <section class="features-sub-head bg-light">
         <div class="container grid">
-            <div>
-                <h1 class="md">The Loruki Platform</h1>
+            <div class="py-5">
+                <h1 class="md">Made with the Freshest Ingredients</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit sequi consequatur itaque. Inventore, quos tempore. Rem ratione aut nihil placeat pariatur magni inventore? Accusantium ex cumque asperiores omnis saepe?</p>
             </div>
-            <img src="images/server2.png" alt="">
+            <img src="images/ingredients.jpg" alt="">
         </div>
     </section>
 
-    <section class="features-main my-2">
-        <div class="container grid grid-3">
-            <div class="card flex">
-                <i class="fas fa-server fa-3x"></i>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus accusamus autem repudiandae natus minima repellat tempore vel provident cupiditate ipsa iste ut in alias, laudantium aliquid corrupti dolore quibusdam vero.</p>
+    <!-- Main -->
+    <section class="features-main my-1">
+        <div class="grid p-3">
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/gold_ramen.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Classic Ramen</h2>
+                    <p>Rich pork broth goodness</p>
+                    <p><span class="price">$5.00</span></p>
+                </div>
             </div>
-            <div class="card flex">
-                <i class="fas fa-network-wired fa-3x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sequi ipsum nihil minima ex. Consequuntur rerum laboriosam qui dolore vero.</p>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/salmon_banquette.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Salmon Special</h2>
+                    <p>Specially made for salmon-lovers</p>
+                    <p><span class="price">$10.00</span></p>
+                </div>
             </div>
-            <div class="card flex">
-                <i class="fas fa-laptop-code fa-3x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, impedit?</p>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/roe_don.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Roe Rice Bowl</h2>
+                    <p>Roe-mania</p>
+                    <p><span class="price">$6.00</span></p>
+                </div>
             </div>
-            <div class="card flex">
-                <i class="fas fa-database fa-3x"></i>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolore!</p>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/tempura_real.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Tempura Bowl</h2>
+                    <p>Mixture of meat and veggies</p>
+                    <p><span class="price">$3.00</span></p>
+                </div>
             </div>
-            <div class="card flex">
-                <i class="fas fa-power-off fa-3x"></i>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem nisi a voluptatibus optio ipsum velit.</p>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/ramen_real.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Corn Ramen</h2>
+                    <p>Naturally sweetness of corn, perfect for fatty broth</p>
+                    <p><span class="price">$7.00</span></p>
+                </div>
             </div>
-            <div class="card flex">
-                <i class="fas fa-upload fa-3x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, facere voluptate! Ipsa esse excepturi perferendis.</p>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/takoyaki.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Takoyaki</h2>
+                    <p>Savory, gooey ball with optopus inside</p>
+                    <p><span class="price">$3.00</span></p>
+                </div>
+            </div>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/wagyu.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Wagyu Rice Bowl</h2>
+                    <p>Melt-in-your-mouth beef with perfect marbling</p>
+                    <p><span class="price">$69.00</span></p>
+                </div>
+            </div>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food//sushi_roe.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Sushi Roe</h2>
+                    <p>Savory appetizer, a balance of everything</p>
+                    <p><span class="price">$2.00</span></p>
+                </div>
+            </div>
+            <div class="menu-item card grid">
+                <div class="menu-pic">
+                    <img src="images/food/tonkatsu_ramen.jpg" alt="">
+                </div>
+                <div class="menu-text">
+                    <h2>Tonkatsu Ramen</h2>
+                    <p>Crispy pork + Rich broth = awesomeness</p>
+                    <p><span class="price">$7.00</span></p>
+                </div>
             </div>
         </div>
     </section>
@@ -94,12 +167,16 @@
             </nav>
             <div class="social">
                 <a target="_blank" href="https://github.com/N1V33R4"><i class="fab fa-github fa-2x"></i></a>
-                <a target="_blank" href="https://www.facebook.com/hou.neavireakpong"><i class="fab fa-facebook fa-2x"></i></a>
-                <a target="_blank" href="https://www.instagram.com/pong___._/"><i class="fab fa-instagram fa-2x"></i></a>
+                <a target="_blank" href="https://www.facebook.com/hou.neavireakpong"><i
+                        class="fab fa-facebook fa-2x"></i></a>
+                <a target="_blank" href="https://www.instagram.com/pong___._/"><i
+                        class="fab fa-instagram fa-2x"></i></a>
                 <a target="_blank" href="https://t.me/P_ong"><i class="fab fa-telegram fa-2x"></i></a>
             </div>
         </div>
     </footer>
+
+    <script src="js/top.js"></script>
 </body>
 
 </html>
