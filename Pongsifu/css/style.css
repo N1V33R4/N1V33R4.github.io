@@ -189,40 +189,40 @@ code, pre {
     font-weight: bold;
 }
 
-/* Cli */
-.cli .card {
+/* Atmostphere */
+.atmostphere .card {
     background-color: #f8961e;
     color: #fff;
 }
 
-.cli .grid {
+.atmostphere .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
-.cli .grid > *:first-child {
+.atmostphere .grid > *:first-child {
     grid-column: 1 / span 2; /* grid-item size and location*/
     grid-row: 1 / span 3;
 }
 
-/* Cloud */
-.cloud {
+/* Chef */
+.chef {
     background-color: #577590;
     color: #fff;
 }
 
-.cloud .grid {
+.chef .grid {
     grid-template-columns: 3fr 4fr;
     gap: 30px;
 }
 
 
 /* Languages */
-.languages .flex {
+.food .flex {
     flex-wrap: wrap;
 }
 
-.languages .card {
+.food .card {
     text-align: center;
     margin: 18px 10px 40px;
     transition: transform 0.2s ease-in;
@@ -230,12 +230,12 @@ code, pre {
     background-color: #c62133;
 }
 
-.languages .card h4 {
+.food .card h4 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.languages .card:hover {
+.food .card:hover {
     transform: translateY(-15px);
 }
 
@@ -384,8 +384,8 @@ code, pre {
 @media(max-width: 768px) {
     .grid,
     .showcase .grid,
-    .cli .grid,
-    .cloud .grid,
+    .atmostphere .grid,
+    .chef .grid,
     .features-main .grid,
     .docs-main .grid {
         grid-template-columns: 1fr;
@@ -412,16 +412,16 @@ code, pre {
         margin-bottom: 40px;
     }
 
-    .cli .grid > *:first-child {
+    .atmostphere .grid > *:first-child {
         grid-column: 1 / span 2;
         grid-row: 1;
     }
 
-    .cli .grid > *:last-child {
+    .atmostphere .grid > *:last-child {
         grid-column: span 2;
     }
 
-    .cloud {
+    .chef {
         padding-top: 1.5rem;    
     }
 
@@ -469,7 +469,7 @@ code, pre {
         grid-template-rows: 1fr;
     }
 
-    .cli .grid > * {
+    .atmostphere .grid > * {
         grid-column: span 1 !important;
     }
 }
