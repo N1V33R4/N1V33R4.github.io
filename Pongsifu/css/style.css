@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 #detach-button-host {
-    display: none; /* for removing video popout button in opera*/
+    display: none; /* for removing video popout button in opera */
 }
 
 :root {
@@ -16,7 +16,6 @@
 
 html, body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 * {
@@ -54,31 +53,6 @@ img {
     width: 100%; /* Keep imgs in container */
 }
 
-code, pre {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
-video {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    background-color: #555;
-    mix-blend-mode: overlay;
-}
-
 /* Navbar */
 .navbar {
     background: linear-gradient(0.25turn, 
@@ -87,7 +61,6 @@ video {
     #f8961e, 
     #f9c74f 
     );
-    background-color: var(--error-color);
     color: #fff;
     height: 70px;
 }
@@ -120,6 +93,25 @@ video {
     height: 500px;
     color: #fff;
     position: relative; /* absolute positioning inside */
+}
+
+video {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-color: #555;
+    mix-blend-mode: overlay;
 }
 
 .showcase h1 {
@@ -157,7 +149,7 @@ video {
     border-radius: 10px;
 }
 
-.showcase::before, .showcase::after {
+.showcase::after {
     content: ''; /* always add when using ::before/after */
     position: absolute;
     height: 100px;
@@ -242,33 +234,33 @@ video {
 }
 
 /* Features */
-.features-head {
+.menu-head {
     position: relative;
     height: 300px;
     color: #eee;
 }
 
-.features-head h1 {
+.menu-head h1 {
     color: #f9c74f;
     font-weight: bold;
 }
 
-.features-head .overlay {
+.menu-head .overlay {
     background-color: #777;
 }
 
-.features-head i, .docs-head i {
+.menu-head i, .docs-head i {
     justify-self: flex-end;
     color: #d9534f;
 }
 
-.features-sub-head img {
+.menu-sub-head img {
     width: 400px;
     justify-self: flex-end;
     border-radius: 90%;
 }
 
-.features-main .menu-item {
+.menu-main .menu-item {
     padding: 0px; 
     gap: 20px;
     height: auto;
@@ -276,19 +268,19 @@ video {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.features-main .menu-pic img {
+.menu-main .menu-pic img {
     height: 100%;
     display: block;
     object-fit: cover;
     border-radius: 10px 0 0 10px;
 }
 
-.features-main .menu-text {
+.menu-main .menu-text {
     padding-right: 20px;
     align-self: flex-start;
 }
 
-.features-main .menu-text h2 {
+.menu-main .menu-text h2 {
     font-weight: bold;
 }
 
@@ -458,26 +450,26 @@ video {
     }
 
     /* Other pages */
-    .features-head, 
-    .features-sub-head,
+    .menu-head, 
+    .menu-sub-head,
     .docs-head {
         text-align: center;
         height: auto;
     }
 
-    .features-head i, 
-    .features-sub-head img,
+    .menu-head i, 
+    .menu-sub-head img,
     .docs-head i {
         justify-self: center;
     }
 
-    .features-head .container {
+    .menu-head .container {
         padding: 20px 0 30px;
         color: #555;
         font-weight: bold;
     }
 
-    .features-sub-head .container div, .features-sub-head img {
+    .menu-sub-head .container div, .menu-sub-head img {
         padding-bottom: 20px;
     }
 
@@ -514,9 +506,7 @@ video {
         grid-column: span 1 !important;
     }
 
-    .features-main .grid {
+    .menu-main .grid {
         padding: 0;
     }
-
-
 }
