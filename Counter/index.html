@@ -8,7 +8,6 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700'>
   <style>
     body {
-      height: 100vh;
       text-align: center;
       font-family: 'Ubuntu Mono';
       user-select: none;
@@ -21,10 +20,11 @@
     }
 
     button:hover {
-      background-color:tomato;
+      background-color: tomato;
     }
 
-    input, button {
+    input,
+    button {
       padding: 0.25rem 0.5rem;
       background-color: white;
     }
@@ -34,6 +34,7 @@
 <body>
   <h1>0</h1>
   <input type="number">
+  <button onclick="decrease()">Decrease</button>
   <button onclick="save()">Save</button>
   <button onclick="reset()">Reset</button>
 
@@ -59,6 +60,12 @@
       setCount(input.value != '' ? input.value : 0)
     })
 
+    function decrease() {
+      if (count == 0)
+        return
+
+      setCount(count - 1)
+    }
     function reset() {
       if (confirm('Are you sure?')) {
         setCount(0)
