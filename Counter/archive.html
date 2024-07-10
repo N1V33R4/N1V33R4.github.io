@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700'>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Ubuntu Mono';
+      user-select: none;
+      background-color: black;
+      color: white;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    button:hover {
+      background-color: tomato;
+    }
+
+    input,
+    button {
+      padding: 0.25rem 0.5rem;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>0</h1>
+  <input type="number">
+  <button onclick="decrease()">Decrease</button>
+  <button onclick="save()">Save</button>
+  <button onclick="reset()">Reset</button>
+
+  <p>17 34 51 80 110 140 170 200</p>
+
+  <script>
+    let count = localStorage.getItem('count') ?? 0
+    let h1 = document.querySelector('h1')
+
+    function setCount(value) {
+      count = parseInt(value)
+      h1.innerHTML = count
+    }
+    setCount(count)
+
+    document.querySelector('html').addEventListener('click', (e) => {
+      if (e.target.matches('button') || e.target.matches('input'))
+        return
+
+      setCount(count + 1)
+    })
+
+    input = document.querySelector('input')
+    input.addEventListener('input', () => {
+      setCount(input.value != '' ? input.value : 0)
+    })
+
+    function decrease() {
+      if (count == 0)
+        return
+
+      setCount(count - 1)
+    }
+    function reset() {
+      if (confirm('Are you sure?')) {
+        setCount(0)
+        input.value = ''
+        localStorage.removeItem('count')
+      }
+    }
+    function save() {
+      localStorage.setItem('count', count)
+    }
+  </script>
+</body>
+
+</html>
